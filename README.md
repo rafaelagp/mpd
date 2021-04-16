@@ -25,3 +25,8 @@ services:
 user_id = Id for the user with filesystem permission<br>
 group_id = Id for the primary group of the user with filesystem permission<br>
 audio_group_id = Id for the audio group for /dev/snd access<br>
+
+```
+aplay -L
+```
+Use the above command to list the sound devices within the container and configure the mpd.conf accordingly.
