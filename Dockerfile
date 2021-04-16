@@ -1,8 +1,8 @@
-FROM alpine:3.12
+FROM debian:buster-slim
 
-RUN set -xe \
-    && apk add --no-cache mpd alsa-lib alsaconf alsa-utils \
-    && setcap -r /usr/bin/mpd
+RUN apt-get update
+RUN apt-get install mpd alsa-utils -y
+RUN rm -rf /var/lib/apt/lists/*
 
 VOLUME /var/lib/mpd
 
