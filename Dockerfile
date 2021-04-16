@@ -1,8 +1,7 @@
 FROM alpine:3.12
-MAINTAINER EasyPi Software Foundation
 
 RUN set -xe \
-    && apk add --no-cache mpd mpc ncmpc \
+    && apk add --no-cache mpd alsa-utils \
     && setcap -r /usr/bin/mpd
 
 VOLUME /var/lib/mpd
