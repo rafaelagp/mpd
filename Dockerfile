@@ -1,7 +1,7 @@
 FROM alpine:3.12
 
 RUN set -xe \
-    && apk add --no-cache mpd alsa-utils \
+    && apk add --no-cache mpd alsa-lib alsaconf alsa-utils \
     && setcap -r /usr/bin/mpd
 
 VOLUME /var/lib/mpd
